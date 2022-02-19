@@ -77,6 +77,7 @@ add_action( 'wp_ajax_bpinf_action', 'bpinf_ajax_handler' );
 function bpinf_ajax_handler() {
 	
 	check_ajax_referer( 'bpinf_nonce' );
+// sanitize the following components!	
 	$pod = $_POST[ 'pod' ];
 	$field = $_POST[ 'field' ];
 	$value = $_POST[ 'value' ];
