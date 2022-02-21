@@ -56,6 +56,7 @@ function bpinf_enqueue_scripts() {
     if (is_page ( 'Presentielijst' )) {
 		wp_enqueue_script( 'bpinf-presentie-script' );
     } else if (is_page( 'Test' )) {
+        wp_enqueue_script( 'wp-api' ); // wordpress rest api lib... -> wpApiSettings
 		$bpinf_nonce = wp_create_nonce( 'bpinf_nonce' );
         wp_localize_script( 
         	'bpinf-contact-script',
